@@ -221,7 +221,7 @@ new BlockUsageTracker();
  * @param string $plugin_slug     The plugin slug.
  * @param string $learn_more_link The link to more information.
  * 
- * @since  2.2.0
+ * @since  1.1.0
  * @return bool
  */
 function wp_com_plugin_check( $plugin_slug, $learn_more_link ) {
@@ -250,7 +250,7 @@ function wp_com_plugin_check( $plugin_slug, $learn_more_link ) {
 /**
  * Auto-deactivate the plugin if running in an unsupported environment.
  *
- * @since  2.2.0
+ * @since  1.1.0
  * @return void
  */
 function wpcom_auto_deactivation() {
@@ -263,7 +263,7 @@ add_action( 'plugins_loaded', 'wpcom_auto_deactivation' );
 /**
  * Display an admin notice if the plugin was deactivated due to hosting restrictions.
  *
- * @since  2.2.0
+ * @since  1.1.0
  * @return void
  */
 function wpcom_admin_notice() {
@@ -291,7 +291,7 @@ add_action( 'admin_notices', 'wpcom_admin_notice' );
 /**
  * Prevent plugin activation on WordPress.com-hosted sites.
  *
- * @since  2.2.0
+ * @since  1.1.0
  * @return void
  */
 function wpcom_activation_check() {
@@ -317,7 +317,7 @@ register_activation_hook( __FILE__, 'wpcom_activation_check' );
 /**
  * Add a deactivation flag when the plugin is deactivated.
  *
- * @since  2.2.0
+ * @since  1.1.0
  * @return void
  */
 function wpcom_deactivation_flag() {
